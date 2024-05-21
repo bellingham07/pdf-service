@@ -1,0 +1,3 @@
+pdf-tool处理pdf文件，将第二页提出来单独保存，并添加水印，输出结果位于 ./pdf-tool/pdfcpu/out下
+使用rabbitmq进行消息传递，用户发送文件之后，启动mq，开启订阅；service处理完之后，向mq发送消息。
+系统只用到一张表，user用来存储用户数据。字段位于 ./user/api/internal/model下

@@ -1,0 +1,10 @@
+Name: user
+Host: 0.0.0.0
+Port: 8889
+
+MySQL:
+  DSN: "dsn"
+  LogMode: true
+  MaxOpenCons: 10
+  MaxIdleCons: 10
+  CreateBatchSize: 300

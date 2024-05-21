@@ -1,0 +1,18 @@
+syntax = "v2"
+
+@server(
+    //    jwt: Auth
+    group: pdf
+    //    middleware : Authority
+    prefix:  /pdf
+)
+
+service pdf {
+    @handler SendPdfFile
+    post /send
+}
+
+type (
+    SendPdfFileReq {
+    }
+)

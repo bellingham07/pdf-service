@@ -1,0 +1,26 @@
+syntax = "v2"
+
+@server(
+    //    jwt: Auth
+    group: user
+    //    middleware : Authority
+    prefix:  /user
+)
+
+service user {
+    @handler Login
+    post /login (LoginReq)
+    @handler Register
+    post /reg (RegisterReq)
+    @handler SendPdf
+    post /send
+}
+
+type (
+    User {
+        Phone string `json:"phone"`
+        Pwd string `json:"pwd"`
+    }
+    LoginReq{User}
+    RegisterReq{User}
+)
